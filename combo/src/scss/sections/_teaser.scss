@@ -112,6 +112,18 @@
       z-index: 1;
       opacity: 0.5;
     }
+    &::before {
+      content: "";
+      width: 70%;
+      height: 100%;
+      background-color: #1ee7ca;
+      position: absolute;
+      -webkit-clip-path: polygon(0 0, 42% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 49% 0, 100% 100%, 0% 100%);
+      bottom: 0;
+      z-index: 1;
+      opacity: 1;
+    }
 
 
     &__content {

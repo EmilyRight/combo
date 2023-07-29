@@ -1,7 +1,8 @@
 .section--footer {
-  background: $color-dark;
+  font-family: $font1;
+  background-color: #f3f5f6;
   .section-layer {
-    padding: 3rem;
+    padding: 2.4rem;
     display: block;
     .box-content {
       width: 100%;
@@ -13,6 +14,7 @@
     }
 
     .rules {
+      margin-bottom: 1rem;
       .text-link {
         text-decoration: underline;
         color: $color-gray0;
@@ -24,7 +26,7 @@
 
     @media (max-width: 600px) {
       max-height: 9.2rem;
-      padding: 2.4rem 1.8rem;
+      padding: 1.8rem;
     }
   }
 }

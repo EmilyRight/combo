@@ -1,0 +1,106 @@
+.section-join {
+  .section-layer {
+    flex-direction: column;
+
+  }
+  .join {
+    &__grid-container {
+      margin-bottom: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    &__button {
+      margin-bottom: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .join-item {
+    border-radius: 1.8rem;
+    box-shadow: 0px 0.4rem 2rem 0px rgba(0, 0, 0, 0.08);
+    padding: 1.8rem;
+    &__image {
+      max-width: 4.6rem;
+      margin-bottom: 1.8rem;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &__text {
+      font-family: $font1;
+      @include text-normal;
+      margin: 0;
+    }
+
+    &_first {
+      padding: 2rem 1.8rem 2.4rem 1.8rem;
+      border-radius: 18px;
+      background-image: linear-gradient(
+        49deg,
+        rgba(29, 230, 202, 0.3) 0.01%,
+        rgba(29, 228, 202, 0.63) 100%
+      );
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .join-item__image {
+        max-width: 68%;
+        align-self: flex-end;
+        margin-right: -3rem;
+        margin-bottom: 0rem;
+        img {
+          max-width: 100%;
+        }
+      }
+      .join-item__title {
+        margin-bottom: 1.8rem;
+      }
+      .join-item__button {
+
+        margin-bottom: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .section-layer {
+      padding-top: 2rem;
+    }
+    .join {
+      &__grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto ;
+        margin-bottom: 3.6rem;
+      }
+    }
+
+    .join-item {
+      border-radius: 1.8rem;
+      box-shadow: 0px 0.4rem 2rem 0px rgba(0, 0, 0, 0.08);
+      padding: 3.9rem;
+      &__image {
+        max-width: 6.4rem;
+        margin-bottom: 1.8rem;
+      }
+
+      &_first {
+        padding: 3.6rem 1.8rem 4.3rem 4.3rem;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        justify-content: space-between;
+        .join-item__title {
+          margin-bottom: 2.5rem;
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}
