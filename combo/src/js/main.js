@@ -3,8 +3,10 @@ import detectDevice from './components/detectDevice';
 
 import { openModal } from './components/modal';
 import GTMEvents from './components/gtmEvents';
+import Animations from './components/animations';
 
 const GTM = new GTMEvents();
+const animation = new Animations();
 
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
@@ -12,6 +14,7 @@ window.addEventListener('load', () => {
   new WOW().init();
 
   GTM.addEventListeners();
+  animation.init();
   goNextSection();
   openPopup();
   handleFAQopening();
