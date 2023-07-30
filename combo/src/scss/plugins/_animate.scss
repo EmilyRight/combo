@@ -698,7 +698,7 @@
 
 @keyframes sim {
   0% {
-    
+
     opacity: 0;
     transform: translateY(-5rem);
   }
@@ -790,5 +790,23 @@
 .profit-3 {
   -webkit-animation-name: profit-3;
   animation-name: profit-3;
+  animation-duration: 1s;
+}
+
+@keyframes scalePrice {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scalePrice {
+  -webkit-animation-name: scalePrice;
+  animation-name: scalePrice;
   animation-duration: 1s;
 }

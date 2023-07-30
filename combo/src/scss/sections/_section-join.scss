@@ -66,19 +66,15 @@
             right: 0%;
             opacity: 0;
             z-index: 1;
-            // animation: sim 1s linear 0s 1 normal forwards;
           }
-          // &_sim.animated {
-          //   animation: sim 1s linear 0s 1 normal forwards;
-          // }
+
 
           &_shadow {
             bottom: -43%;
             right: 3rem;
             z-index: 0;
             opacity: 0;
-            // transform: scaleX(0.2);
-            // animation: simShadow 1s linear 0s 1 normal forwards;
+
           }
           // &_shadow.animated {
           //   animation: simShadow 1s linear 0s 1 normal forwards;

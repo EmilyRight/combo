@@ -216,6 +216,7 @@
       &__new {
         font-size: 2.8rem;
         line-height: 3.6rem;
+        animation: scalePrice 1s linear 0s 1 normal forwards;
       }
 
       &__old {
@@ -249,3 +250,5 @@
     }
   }
 }
+
+
