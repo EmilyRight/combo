@@ -172,6 +172,7 @@
       &_last {
         padding-top: 8.6rem;
         .shop-item__image {
+          pointer-events: none;
           img {
             width: 35rem;
 
