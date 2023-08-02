@@ -67,6 +67,10 @@ body {
   padding-left: 18px;
   padding-right: 18px;
 
+  @media all and (max-width: 1439px) {
+    max-width: 90%;
+  }
+
   @media all and (max-width: 600px) {
     max-width: 100%;
   }

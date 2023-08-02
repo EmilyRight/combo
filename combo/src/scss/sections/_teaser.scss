@@ -100,6 +100,7 @@
       display: none;
     }
   }
+
   @media (min-width: 600px) {
     overflow: hidden;
     position: relative;
@@ -128,7 +129,6 @@
     //   opacity: 1;
     // }
 
-
     &__content {
       flex-direction: row;
       justify-content: space-between;
@@ -143,13 +143,12 @@
       order: 2;
       // bottom: 2.5rem;
     }
-
     &__bg {
       display: block;
       position: absolute;
       min-width: 100%;
 
-      left: 0;
+      left: -15%;
       top: 0;
       z-index: 1;
       mix-blend-mode: multiply;
@@ -160,10 +159,12 @@
         height: 50vw;
       }
     }
+
     .pic-layer {
       &_man {
-        right: -17%;
-        width: 125%;
+        right: -15%;
+        width: 121%;
+        // bottom: 2.5rem;
       }
     }
 
@@ -212,6 +213,11 @@
         display: block;
         color: $color-dark;
       }
+    }
+  }
+  @media (min-width: 1267px) {
+    &__bg {
+      left: 0%;
     }
   }
 }
