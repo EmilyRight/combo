@@ -7,28 +7,44 @@
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="icon" href="./img/favicons/favicon-32.png" sizes="32x32" />
-    <link rel="icon" href="./img/favicons/favicon-128.png" sizes="128x128" />
-    <link rel="icon" href="./img/favicons/favicon-192.png" sizes="192x192" />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-32.png"
+      sizes="32x32"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-128.png"
+      sizes="128x128"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="./img/favicons/favicon-192.png"
+      sizes="192x192"
+      type="image/x-icon"
+    />
     <link
       rel="shortcut icon"
       href="./img/favicons/favicon-196.png"
       sizes="196x196"
+      type="image/x-icon"
     />
     <link
       rel="apple-touch-icon"
       href="./img/favicons/favicon-152.png"
       sizes="152x152"
+      type="image/x-icon"
     />
     <link
       rel="apple-touch-icon"
       href="./img/favicons/favicon-180.png"
       sizes="180x180"
+      type="image/x-icon"
     />
 
-    <link rel="dns-prefetch" href="//ajax.googleapis.com/" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com/" />
-    <link rel="preconnect" href="//ajax.googleapis.com/ajax/libs/jquery/" />
     <link rel="preconnect" href="//www.googletagmanager.com/" />
 
     <link
@@ -56,26 +72,10 @@
       crossorigin="anonymous"
     />
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KX728S7");
-    </script>
-    <!-- End Google Tag Manager -->
-
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.min.css?v1" media="all" />
 
     <!-- OG -->
-
     <meta
       name="description"
       content="Смартфоны Infinix со скидкой до 50% за комплект на сайте Tele2, в салонах связи Tele2. Купите выгодный комплект – смартфон, страховка и тариф на три месяца."
@@ -131,16 +131,6 @@
     <meta name="theme-color" content="#1f2229" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KX728S7"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div class="svgs">
       <svg xmlns="http://www.w3.org/2000/svg">
         <g id="page-logo">
@@ -202,6 +192,7 @@
               class="logo logo--white js-gtm-event"
               data-event="logo"
               data-section="teaser"
+              aria-label="Теле 2"
             >
               <svg viewBox="0 0 88 33" width="100%">
                 <use xlink:href="#page-logo"></use>
@@ -210,38 +201,13 @@
           </div>
           <div class="teaser__content">
             <div class="teaser__picture">
-              <div
-                class="pic-layer pic-layer_man wow fadeIn"
-                data-wow-delay=".4s"
-              >
+              <div class="pic-layer pic-layer_man" data-wow-delay=".4s">
                 <picture>
                   <source
                     media="(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) and (max-width: 600px)"
                     srcset="./img/page/boy@2x.png"
                   />
-                  <source
-                    media="(max-width: 600px)"
-                    srcset="./img/page/boy.png"
-                  />
-                  <img
-                    alt=""
-                    loading="lazy"
-                    src="./img/page/boy.png"
-                    width="100%"
-                  />
-                </picture>
-              </div>
-              <div
-                class="pic-layer pic-layer_background wow fadeIn"
-                data-wow-delay=".4s"
-              >
-                <picture>
-                  <img
-                    alt=""
-                    loading="lazy"
-                    src="./img/page/boy-bg.png"
-                    width="100%"
-                  />
+                  <img alt="" src="./img/page/boy@2x.png" width="100%" />
                 </picture>
               </div>
             </div>
@@ -251,13 +217,14 @@
                   Выгода&nbsp;50% на&nbsp;смартфоны INFINIX
                 </div>
                 <p class="subtext">
-                  При оплате комплекта из&nbsp;смартфона, 3&nbsp;месяцев связи
-                  и&nbsp;комплексной защиты
+                  При оплате комплекта из&nbsp;смартфона, трех&nbsp;месяцев
+                  связи и&nbsp;комплексной защиты
                 </p>
                 <button
                   class="teaser-more js-go-next js-gtm-event"
                   data-event="more"
                   data-section="teaser"
+                  title="Подробнее"
                 >
                   <span>Подробнее</span>
                   <i class="ico icon-field-opener teaser-more__icon">
@@ -287,6 +254,11 @@
             <use xlink:href="#teaser-bg"></use>
           </svg>
         </div>
+        <div class="pic-layer_background" data-wow-delay=".4s">
+          <picture>
+            <img alt="" src="./img/page/boy-bg.png" width="100%" />
+          </picture>
+        </div>
       </section>
 
       <section class="section section-shop shop">
@@ -296,14 +268,14 @@
             <li class="shop-list__item shop-item">
               <div class="shop-item__label">Скидка&nbsp;50%</div>
               <div class="shop-item__image">
-                <img src="./img/page/1.png" alt="" />
+                <img src="./img/page/1.jpg" alt="" />
               </div>
               <div class="shop-item__name">Смартфон Smart&nbsp;7 plus 3/64</div>
               <div class="shop-item__price price">
                 <div class="price__new wow scalePrice" data-wow-delay=".5s">
-                  3&nbsp;495&nbsp;₽
+                  3&nbsp;995&nbsp;₽
                 </div>
-                <div class="price__old">6&nbsp;990&nbsp;₽</div>
+                <div class="price__old">7&nbsp;990&nbsp;₽</div>
               </div>
               <div class="shop-item__footer item-footer">
                 <div class="item-footer__conditions">
@@ -313,6 +285,7 @@
                   class="item-footer__button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/product/smartphones/infinix-smart-7-plus-3-64gb-emerald-green"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_smart7"
                 >
                   <span class="button__text"> Подробнее </span>
@@ -325,16 +298,16 @@
             <li class="shop-list__item shop-item">
               <div class="shop-item__label">Скидка&nbsp;50%</div>
               <div class="shop-item__image">
-                <img src="./img/page/2.png" alt="" />
+                <img src="./img/page/2.jpg" alt="" />
               </div>
               <div class="shop-item__name">
-                Смартфон Infinix HOT 30i 4/128Gb
+                Смартфон Infinix HOT 30i 8/128Gb
               </div>
               <div class="shop-item__price price">
                 <div class="price__new wow scalePrice" data-wow-delay="1s">
-                  4&nbsp;495&nbsp;₽
+                  5&nbsp;995&nbsp;₽
                 </div>
-                <div class="price__old">8&nbsp;990&nbsp;₽</div>
+                <div class="price__old">11&nbsp;990&nbsp;₽</div>
               </div>
               <div class="shop-item__footer item-footer">
                 <div class="item-footer__conditions">
@@ -344,6 +317,7 @@
                   class="item-footer__button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/product/smartphones/infinix-hot-30i-4-128gb-glacier-blue"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_hoti"
                 >
                   <span class="button__text"> Подробнее </span>
@@ -353,17 +327,17 @@
                 </a>
               </div>
             </li>
-            <li class="shop-list__item shop-item">
+            <!-- <li class="shop-list__item shop-item">
               <div class="shop-item__label">Скидка&nbsp;50%</div>
               <div class="shop-item__image">
-                <img src="./img/page/3.png" alt="" />
+                <img src="./img/page/3.jpg" alt="" />
               </div>
               <div class="shop-item__name">Смартфон Infinix HOT 30 8/128Gb</div>
               <div class="shop-item__price price">
                 <div class="price__new wow scalePrice" data-wow-delay="0.5s">
-                  6&nbsp;995&nbsp;₽
+                  7&nbsp;495&nbsp;₽
                 </div>
-                <div class="price__old">13&nbsp;990&nbsp;₽</div>
+                <div class="price__old">14&nbsp;990&nbsp;₽</div>
               </div>
               <div class="shop-item__footer item-footer">
                 <div class="item-footer__conditions">
@@ -373,6 +347,7 @@
                   class="item-footer__button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/product/smartphones/infinix-hot-30-8-128gb-surfing-green"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_hot30"
                 >
                   <span class="button__text"> Подробнее </span>
@@ -381,11 +356,11 @@
                   </svg>
                 </a>
               </div>
-            </li>
+            </li> -->
             <li class="shop-list__item shop-item">
               <div class="shop-item__label">Скидка&nbsp;50%</div>
               <div class="shop-item__image">
-                <img src="./img/page/4.png" alt="" />
+                <img src="./img/page/4.jpg" alt="" />
               </div>
               <div class="shop-item__name">Смартфон NOTE 30i 8/256</div>
               <div class="shop-item__price price">
@@ -402,6 +377,7 @@
                   class="item-footer__button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/product/smartphones/infinix-note-30i-8-256gb-impression-green"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_notei"
                 >
                   <span class="button__text"> Подробнее </span>
@@ -411,17 +387,17 @@
                 </a>
               </div>
             </li>
-            <li class="shop-list__item shop-item">
+            <!-- <li class="shop-list__item shop-item">
               <div class="shop-item__label">Скидка&nbsp;50%</div>
               <div class="shop-item__image">
-                <img src="./img/page/5.png" alt="" />
+                <img src="./img/page/5.jpg" alt="" />
               </div>
               <div class="shop-item__name">Смартфон NOTE 30 8/256</div>
               <div class="shop-item__price price">
                 <div class="price__new wow scalePrice" data-wow-delay="1.5s">
-                  8&nbsp;495&nbsp;₽
+                  9&nbsp;495&nbsp;₽
                 </div>
-                <div class="price__old">16&nbsp;990&nbsp;₽</div>
+                <div class="price__old">18&nbsp;990&nbsp;₽</div>
               </div>
               <div class="shop-item__footer item-footer">
                 <div class="item-footer__conditions">
@@ -431,6 +407,7 @@
                   class="item-footer__button button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/product/smartphones/infinix-note-30-8-256gb-interstellar-blue"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_note30"
                 >
                   <span class="button__text"> Подробнее </span>
@@ -449,6 +426,7 @@
                   class="item-footer__button btn-primary js-gtm-event"
                   href="https://tele2.ru/shop/devices/smartphones?promo=13700001&sortingType=pop"
                   target="_blank"
+                  title="Подробнее"
                   data-event="conv_all"
                 >
                   <span class="button__text">Смотреть</span>
@@ -464,14 +442,8 @@
                   src="./img/page/6.png"
                   alt=""
                 />
-                <img
-                  class="phone-bg wow fadeInDown"
-                  data-wow-delay="2.5s"
-                  src="./img/page/6-bg.png"
-                  alt=""
-                />
               </div>
-            </li>
+            </li>-->
           </ul>
         </div>
       </section>
@@ -500,7 +472,7 @@
                   class="popup-icon popup__link js-gtm-event"
                   data-event="tooltip"
                 >
-                  <img src="./img/icons/popup-icon.svg" alt="" />
+                  i
                 </button>
               </div>
               <div class="profits-item__number">2</div>
@@ -532,26 +504,32 @@
                 <div class="profits-item__text">
                   В&nbsp;комплект входит подписка MiXX&nbsp;S бесплатно
                   на&nbsp;три месяца
+                  <button
+                    class="popup-icon profits__popup-icon popup__link js-gtm-event"
+                    data-event="tooltip"
+                  >
+                    i
+                  </button>
                 </div>
               </div>
               <div class="profits-item__image image">
                 <img
                   class="image_normal wow fadeIn"
                   data-wow-delay=".4s"
-                  src="./img/page/box.png"
+                  src="./img/page/profitsbox.png"
                   alt=""
                 />
                 <img
                   class="image_blured wow fadeInUp"
                   data-wow-delay=".8s"
-                  src="./img/page/box.png"
+                  src="./img/page/profitsbox.png"
                   alt=""
                 />
               </div>
             </li>
           </ul>
           <a
-            href="https://tele2.ru/shop/devices/smartphones"
+            href="https://tele2.ru/shop/devices/smartphones?sortingType=pop&promo=12900013"
             class="profit__link btn btn-primary js-gtm-event"
             data-event="conv_want"
             target="_blank"
@@ -589,7 +567,7 @@
             </li>
             <li class="join-list__item join-item">
               <div class="join-item__image">
-                <img src="./img/icons/present.svg" alt="" />
+                <img src="./img/icons/present.png" alt="" />
               </div>
               <p class="join-item__text">
                 Остатки минут не&nbsp;сгорают&nbsp;&mdash; меняйте
@@ -598,7 +576,7 @@
             </li>
             <li class="join-list__item join-item first-item">
               <div class="join-item__image">
-                <img src="./img/icons/snow.svg" alt="" />
+                <img src="./img/icons/snow.png" alt="" />
               </div>
               <p class="join-item__text">
                 При новом подключении цена на&nbsp;тариф не&nbsp;изменится
@@ -607,7 +585,7 @@
             </li>
             <li class="join-list__item join-item first-item">
               <div class="join-item__image">
-                <img src="./img/icons/share.svg" alt="" />
+                <img src="./img/icons/share.png" alt="" />
               </div>
               <p class="join-item__text">
                 Можно делиться&nbsp;ГБ, покупать и&nbsp;продавать
@@ -616,7 +594,7 @@
             </li>
             <li class="join-list__item join-item first-item">
               <div class="join-item__image">
-                <img src="./img/icons/call.svg" alt="" />
+                <img src="./img/icons/call.png" alt="" />
               </div>
               <p class="join-item__text">
                 Минуты не&nbsp;расходуются при звонках внутри сети
@@ -880,6 +858,51 @@
         </div>
       </div>
     </div>
+    <div class="popup-modal popup-modal-hidden">
+      <div class="modal-box" id="popup-modal-box">
+        <div class="modal-box__header">
+          <div class="close">
+            <svg viewBox="0 0 24 24" width="100%">
+              <use xlink:href="#close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="modal-box__body">
+          <ul class="modal-box__list modal-box-list">
+            <li class="modal-box-list__item">
+              Скидка&nbsp;50% на&nbsp;смартфон применится при оформлении
+              комплекта, состоящего из&nbsp;устройства, страховки
+              &laquo;Комплексная защита&raquo; и&nbsp;SIM-карты с&nbsp;тарифом,
+              предоплаченным на&nbsp;3&nbsp;месяца.
+            </li>
+            <li class="modal-box-list__item">
+              Страховка покрывает риск кражи или поломки смартфона
+              и&nbsp;действует до&nbsp;2&nbsp;лет, начиная с&nbsp;16-го дня
+              после покупки.
+            </li>
+          </ul>
+        </div>
+        <div class="modal-box__actions">
+          <div>
+            <span class="btn close">Понятно</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KX728S7");
+    </script>
+    <!-- End Google Tag Manager -->
     <script type="module" src="./js/main.js?v1" defer></script>
   </body>
 </html>

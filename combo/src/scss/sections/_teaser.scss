@@ -21,6 +21,7 @@
   .pic-layer {
     position: absolute;
     max-height: 100%;
+    pointer-events: none;
     picture {
       min-height: 100%;
     }
@@ -36,16 +37,25 @@
     }
 
     &_background {
+      position: absolute;
       height: 100%;
       bottom: 0;
       z-index: 0;
+      pointer-events: none;
+      img {
+        position: relative;
+        min-height: 100%;
+        bottom: 0;
+      }
     }
   }
 
   .teaser-body {
     z-index: 2;
-    max-width: 100%;
-    margin: 0 auto;
+    // max-width: 100%;
+    // margin: 0 auto;
+    margin-right: -1.8rem;
+    margin-left: -1.8rem;
     &__text {
       padding: 1.8rem;
       margin: 0;
@@ -165,6 +175,14 @@
         right: -15%;
         width: 121%;
         // bottom: 2.5rem;
+      }
+      &_background {
+        position: absolute;
+        height: 130%;
+        max-height: none;
+        max-width: 50%;
+        right: 10%;
+        bottom: 0rem;
       }
     }
 

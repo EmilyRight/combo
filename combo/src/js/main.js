@@ -9,12 +9,13 @@ const GTM = new GTMEvents();
 const animation = new Animations();
 
 /// /////// DocReady //////////
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
 
   GTM.addEventListeners();
   animation.init();
+  scrollTeaser(document.querySelector('.shop'));
   goNextSection();
   openPopup();
   handleFAQopening();
@@ -43,6 +44,14 @@ function goNextSection() {
       });
     });
   });
+}
+
+// scroll to next if URL contains #about
+
+function scrollTeaser(el) {
+  if (document.location.hash === '#about') {
+    scrollToElement(el);
+  }
 }
 // open pop-up modal
 function openPopup() {
