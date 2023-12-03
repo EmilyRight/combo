@@ -6,10 +6,15 @@
     line-height: 2.8rem;
   }
 }
+@mixin text-small {
+  font-family: $font1;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
 
 @mixin btn-transparent {
   display: block;
-  padding: .9rem 1.9rem;
+  padding: 0.9rem 1.9rem;
   text-align: center;
   font-family: $font1b;
   font-size: 1.6rem;

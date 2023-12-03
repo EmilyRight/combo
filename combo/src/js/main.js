@@ -4,22 +4,35 @@ import detectDevice from './components/detectDevice';
 import { openModal } from './components/modal';
 import GTMEvents from './components/gtmEvents';
 import Animations from './components/animations';
+import handleTooltip from './components/tooltip';
+import ShopItemView from './components/shopItemView';
+import pricesData from './constants/devicesData';
 
 const GTM = new GTMEvents();
 const animation = new Animations();
 
 /// /////// DocReady //////////
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
-
   GTM.addEventListeners();
   animation.init();
   scrollTeaser(document.querySelector('.shop'));
   goNextSection();
   openPopup();
+  handleTooltip();
   handleFAQopening();
+  renderShop();
 });
+
+function renderShop() {
+  const shopList = document.querySelector('.shop-list');
+  const lastItem = document.querySelector('.shop-item_last');
+  pricesData.forEach((item) => {
+    const shopItem = new ShopItemView(item).createElement();
+    shopList.insertBefore(shopItem, lastItem);
+  });
+}
 
 // scroll to next section
 function scrollToElement(el) {

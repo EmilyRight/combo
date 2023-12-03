@@ -8,19 +8,23 @@
       text-align: center;
       margin-bottom: 2rem;
     }
+
     &__list {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
     }
   }
 
   .shop-item {
-    // width: 43vw;
-    max-width: 70%;
+    width: calc(100% / 2 - 1rem);
+    // min-height: 31.5rem;
+    height: 84vw;
+    max-height: 38.5rem;
+    max-width: 25rem;
     box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.06);
     margin-bottom: 2rem;
     padding: 1.2rem;
@@ -29,34 +33,43 @@
     overflow: hidden;
     background-color: #fff !important;
     &_last {
-      padding-top: 3rem;
+      padding: 0 1.2rem;
       background-image: url(../img/page/phone-bg.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
-      background-position: center right;
+      background-position: right 0;
+      position: relative;
+      // display: flex;
+      // max-width: none;
+      // flex-basis: 100%;
+      // max-height: 11.2rem;
       .shop-item__image {
         height: 100%;
         width: 100%;
+        // max-width: 50%;
+        position: absolute;
         overflow: visible;
         bottom: 0;
         left: 0;
-        position: absolute;
+        min-height: 20rem;
         pointer-events: none;
 
         img {
+          width: 100%;
+          max-width: 35rem;
           position: absolute;
           display: block;
           max-height: none;
           bottom: 0;
           width: 19rem;
+          aspect-ratio: unset !important;
         }
         .phone {
-          min-width: 19.5rem;
-          z-index: 1;
-          top: auto;
+          width: 110%;
+          right: 0;
           bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          z-index: 1;
+          max-width: 25rem;
         }
         .phone-bg {
           z-index: 0;
@@ -67,27 +80,89 @@
       }
 
       .item-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.2rem;
         &__conditions {
           color: #1f2229;
           font-size: 1.3rem;
           font-style: normal;
           font-weight: 700;
-          line-height: 138.462%;
         }
       }
     }
+    // &_last {
+    //   padding: 0 1.2rem;
+    //   background-image: url(../img/page/phone-bg-mob.jpg);
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    //   background-position: right bottom;
+    //   position: relative;
+    //   display: flex;
+    //   max-width: none;
+    //   flex-basis: 100%;
+    //   max-height: 11.2rem;
+    //   .shop-item__image {
+    //     height: 100%;
+    //     width: 100%;
+    //     max-width: 50%;
+    //     overflow: visible;
+    //     bottom: 0;
+    //     left: 0;
+    //     min-height: 20rem;
+    //     pointer-events: none;
+
+    //     img {
+    //       position: absolute;
+    //       display: block;
+    //       max-height: none;
+    //       bottom: 0;
+    //       width: 19rem;
+    //       aspect-ratio: unset !important;
+    //     }
+    //     .phone {
+    //       width: 100%;
+    //       z-index: 1;
+    //       top: -2rem;
+    //       left: 50%;
+    //       transform: translateX(-50%);
+    //       max-width: 15rem;
+    //     }
+    //     .phone-bg {
+    //       z-index: 0;
+    //       left: auto;
+    //       transform: none;
+    //       right: 0rem;
+    //     }
+    //   }
+
+    //   .item-footer {
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: flex-start;
+    //     gap: 1.2rem;
+    //     &__conditions {
+    //       color: #1f2229;
+    //       font-size: 1.3rem;
+    //       font-style: normal;
+    //       font-weight: 700;
+    //     }
+    //   }
+    // }
 
     &__label {
       display: inline-block;
       border-radius: 50px;
-      background: var(--new-colors-in-progress-green-day-70, #e2f8ea);
-      color: #00802f;
+      background: rgba(63, 203, 255, 0.15);
+      color: #00baff;
       font-family: $font1;
       font-size: 1.1rem;
       padding: 0.4rem 0.8rem;
       font-style: normal;
       font-weight: 400;
       line-height: 127.273%;
+      margin-bottom: 0.7rem;
     }
 
     &__image {
@@ -95,14 +170,15 @@
       // height: 15rem;
       position: relative;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
       img {
         position: relative;
         display: block;
         margin: 0 auto;
-        width: 90%;
+        // width: 90%;
         max-width: 100%;
         max-height: 100%;
-        aspect-ratio:1/1;
       }
     }
 
@@ -113,6 +189,7 @@
       font-weight: 400;
       line-height: 128.571%;
       margin-bottom: 1.2rem;
+      min-height: 4rem;
     }
   }
   .price {
@@ -133,6 +210,7 @@
       line-height: 1.8rem; /* 138.462% */
     }
   }
+
   .item-footer {
     display: flex;
     align-items: center;
@@ -175,7 +253,7 @@
       }
       &__list {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
     }
 
@@ -185,18 +263,113 @@
       margin-bottom: 3.6rem;
       padding: 1.2rem 1.8rem 1.8rem 2.4rem;
       display: flex;
+      height: 53vw;
+      max-height: 55rem;
       flex-direction: column;
+      margin-right: 1rem;
       &_last {
         padding-top: 8.6rem;
+        // min-height: 38re,;
+        // min-height: 33.483rem;
+        display: block;
+        background-image: url(../img/page/phone-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: right 0;
+        position: relative;
+        flex-basis: auto;
         .shop-item__image {
           pointer-events: none;
+          height: 100%;
+          width: 100%;
+          max-width: none;
+          overflow: visible;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          min-height: 20rem;
+          margin: 0;
           img {
             width: 100%;
             max-width: 35rem;
+            position: absolute;
+            display: block;
+            max-height: none;
+            bottom: 0;
+            width: 19rem;
+            aspect-ratio: unset !important;
+          }
+          .phone {
+            width: 100%;
+            max-width: none;
+            z-index: 1;
+            top: auto;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          .phone-bg {
+            z-index: 0;
+            left: auto;
+            transform: none;
+            right: 0rem;
           }
         }
+        // &_last {
+        //   padding-top: 3.6rem;
+        //   // min-height: 38re,;
+        //   // min-height: 33.483rem;
+        //   background-image: url(../img/page/phone-bg.jpg);
+        //   background-repeat: no-repeat;
+        //   background-size: 100%;
+        //   background-position: right 0;
+        //   position: relative;
+        //   .shop-item__image {
+        //     height: 100%;
+        //     width: 100%;
+        //     overflow: visible;
+        //     bottom: 0;
+        //     left: 0;
+        //     position: absolute;
+        //     min-height: 20rem;
+        //     pointer-events: none;
+
+        //     img {
+        //       position: absolute;
+        //       display: block;
+        //       max-height: none;
+        //       bottom: 0;
+        //       width: 19rem;
+        //       aspect-ratio: unset !important;
+        //     }
+        //     .phone {
+        //       width: 100%;
+        //       z-index: 1;
+        //       top: auto;
+        //       bottom: 0;
+        //       left: 50%;
+        //       transform: translateX(-50%);
+        //     }
+        //     .phone-bg {
+        //       z-index: 0;
+        //       left: auto;
+        //       transform: none;
+        //       right: 0rem;
+        //     }
+        //   }
+
+        //   .item-footer {
+        //     &__conditions {
+        //       color: #1f2229;
+        //       font-size: 1.3rem;
+        //       font-style: normal;
+        //       font-weight: 700;
+        //     }
+        //   }
+        // }
 
         .item-footer {
+          align-items: center;
           &__conditions {
             font-size: 2.2rem;
             font-weight: 700;
@@ -211,7 +384,6 @@
         line-height: 1.8rem;
         max-width: 8.6rem;
       }
-
 
       &__name {
         font-size: 2.2rem;
