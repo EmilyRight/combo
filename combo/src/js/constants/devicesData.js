@@ -48,7 +48,7 @@ const pricesData = [
   },
   {
     id: 5,
-    htmlId: 'Xiaomi Redmi 10S 64Gb',
+    htmlId: 'Xiaomi Redmi Note 10S 64Gb',
     name: 'Смартфон Xiaomi Redmi 10S 64Gb',
     discount: 50,
     oldPrice: 15990,
