@@ -31,6 +31,8 @@ function renderShop() {
   pricesData.forEach((item) => {
     const shopItem = new ShopItemView(item).createElement();
     shopList.insertBefore(shopItem, lastItem);
+    const price = shopItem.querySelector('.price__new');
+    price.classList.add('wow');
   });
 }
 

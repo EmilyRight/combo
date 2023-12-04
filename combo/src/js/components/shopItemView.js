@@ -39,7 +39,7 @@ class ShopItemView {
     <div class="shop-item__price price">
       <div
         class="price__new wow scalePrice"
-        data-wow-delay="0.5s"
+        data-wow-delay="${this.itemObject.id * 0.5}s"
       >${this.stringifyPrice(this.itemObject.newPrice)}</div>
       <div class="price__old">${this.stringifyPrice(this.itemObject.oldPrice)}</div>
     </div>
