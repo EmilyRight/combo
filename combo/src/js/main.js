@@ -5,12 +5,13 @@ import { openModal } from './components/modal';
 import GTMEvents from './components/gtmEvents';
 import Animations from './components/animations';
 import handleTooltip from './components/tooltip';
-import ShopItemView from './components/shopItemView';
-import pricesData from './constants/devicesData';
+import ShopItemView from './components/shopItem/shopItemView';
+import devices from './constants/devices';
+import ShopView from './components/shopItem/shopView';
 
 const GTM = new GTMEvents();
 const animation = new Animations();
-
+const shop = new ShopView();
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
@@ -22,19 +23,20 @@ window.addEventListener('load', () => {
   openPopup();
   handleTooltip();
   handleFAQopening();
-  renderShop();
+  shop.renderShop();
 });
 
-function renderShop() {
-  const shopList = document.querySelector('.shop-list');
-  const lastItem = document.querySelector('.shop-item_last');
-  pricesData.forEach((item) => {
-    const shopItem = new ShopItemView(item).createElement();
-    shopList.insertBefore(shopItem, lastItem);
-    const price = shopItem.querySelector('.price__new');
-    price.classList.add('wow');
-  });
-}
+// function renderShop() {
+//   const shopList = document.querySelector('.shop-list');
+//   const lastItem = document.querySelector('.shop-item_last');
+//   devices.data.forEach((item) => {
+//     console.log(item);
+//     const shopItem = new ShopItemView(item).createElement();
+//     shopList.insertBefore(shopItem, lastItem);
+//     const price = shopItem.querySelector('.price__new');
+//     price.classList.add('wow');
+//   });
+// }
 
 // scroll to next section
 function scrollToElement(el) {
