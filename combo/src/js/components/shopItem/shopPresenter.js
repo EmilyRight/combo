@@ -1,7 +1,7 @@
-class shopItemPresenter {
+class ShopPresenter {
   /**
    * @param {ShopView} view
-   * @param {ShopItemModel} model
+   * @param {ShopModel} model
    */
   constructor(view, model) {
     this.view = view;
@@ -16,16 +16,13 @@ class shopItemPresenter {
 
   createViewState() {
     const items = this.model.getSubscriptions();
-
-    return {
-      items,
-    };
+    return items;
   }
 
   updateView() {
     this.view.state = this.createViewState();
-    this.view.render();
+    this.view.renderShop();
   }
 }
 
-export default shopItemPresenter;
+export default ShopPresenter;

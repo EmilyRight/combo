@@ -22,8 +22,8 @@
   .shop-item {
     width: calc(100% / 2 - 1rem);
     // min-height: 31.5rem;
-    height: 84vw;
-    max-height: 38.5rem;
+    height: 100vw;
+    max-height: 37.5rem;
     max-width: 25rem;
     box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.06);
     margin-bottom: 2rem;
@@ -34,7 +34,7 @@
     background-color: #fff !important;
 
     &_last {
-      padding: 0 1.2rem;
+      padding: 1.2rem 1.2rem 0 1.2rem;
       background-image: url(../img/page/phone-bg.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
@@ -52,7 +52,7 @@
         overflow: visible;
         bottom: 0;
         left: 0;
-
+        margin-bottom: 0;
         pointer-events: none;
 
         img {
@@ -95,6 +95,7 @@
     }
     &__image {
       max-height: 35vw;
+      margin-bottom: 1.8rem;
     }
     // &_last {
     //   padding: 0 1.2rem;
@@ -217,6 +218,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     &__conditions {
       color: #65707b;
       font-size: 1.1rem;
@@ -317,58 +319,6 @@
             right: 0rem;
           }
         }
-        // &_last {
-        //   padding-top: 3.6rem;
-        //   // min-height: 38re,;
-        //   // min-height: 33.483rem;
-        //   background-image: url(../img/page/phone-bg.jpg);
-        //   background-repeat: no-repeat;
-        //   background-size: 100%;
-        //   background-position: right 0;
-        //   position: relative;
-        //   .shop-item__image {
-        //     height: 100%;
-        //     width: 100%;
-        //     overflow: visible;
-        //     bottom: 0;
-        //     left: 0;
-        //     position: absolute;
-        //     min-height: 20rem;
-        //     pointer-events: none;
-
-        //     img {
-        //       position: absolute;
-        //       display: block;
-        //       max-height: none;
-        //       bottom: 0;
-        //       width: 19rem;
-        //       aspect-ratio: unset !important;
-        //     }
-        //     .phone {
-        //       width: 100%;
-        //       z-index: 1;
-        //       top: auto;
-        //       bottom: 0;
-        //       left: 50%;
-        //       transform: translateX(-50%);
-        //     }
-        //     .phone-bg {
-        //       z-index: 0;
-        //       left: auto;
-        //       transform: none;
-        //       right: 0rem;
-        //     }
-        //   }
-
-        //   .item-footer {
-        //     &__conditions {
-        //       color: #1f2229;
-        //       font-size: 1.3rem;
-        //       font-style: normal;
-        //       font-weight: 700;
-        //     }
-        //   }
-        // }
 
         .item-footer {
           align-items: center;
@@ -402,7 +352,7 @@
       &__new {
         font-size: 2.8rem;
         line-height: 3.6rem;
-        animation: scalePrice 1s linear 0s 1 normal forwards;
+        // animation: scalePrice 1s linear 0s 1 normal forwards;
       }
 
       &__old {
@@ -413,6 +363,7 @@
     .item-footer {
       flex-direction: column;
       justify-content: center;
+      gap: 0;
       &__conditions {
         text-align: center;
         font-size: 1.6rem;

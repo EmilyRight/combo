@@ -1,4 +1,4 @@
-class CardModel {
+class ShopModel {
   #apiService;
 
   #devicesList;
@@ -27,4 +27,4 @@ class CardModel {
   }
 }
 
-export default CardModel;
+export default ShopModel;

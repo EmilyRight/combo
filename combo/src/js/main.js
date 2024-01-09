@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
@@ -5,13 +6,16 @@ import { openModal } from './components/modal';
 import GTMEvents from './components/gtmEvents';
 import Animations from './components/animations';
 import handleTooltip from './components/tooltip';
-import ShopItemView from './components/shopItem/shopItemView';
-import devices from './constants/devices';
 import ShopView from './components/shopItem/shopView';
+import ApiService from './services/api-service';
+import ShopModel from './components/shopItem/shopModel';
+import ShopPresenter from './components/shopItem/shopPresenter';
 
 const GTM = new GTMEvents();
 const animation = new Animations();
-const shop = new ShopView();
+
+const apiService = new ApiService();
+const shopModel = new ShopModel(apiService);
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
@@ -23,7 +27,11 @@ window.addEventListener('load', () => {
   openPopup();
   handleTooltip();
   handleFAQopening();
-  shop.renderShop();
+  // shop.renderShop();
+  shopModel.loadData().then(() => {
+    const shopView = new ShopView();
+    new ShopPresenter(shopView, shopModel);
+  });
 });
 
 // function renderShop() {

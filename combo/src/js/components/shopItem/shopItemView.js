@@ -24,14 +24,12 @@ class ShopItemView {
 
     this.promoCampaignIds.forEach((promoCampaign) => {
       const promo = promoList.filter((campaign) => campaign.id === promoCampaign.id)[0];
-
       return promo?.discount;
     });
+
     promoList.forEach((promoCampaign) => {
       const promo = this.promoCampaignIds.filter((campaign) => campaign.id === promoCampaign.id);
-      console.log(promo);
       if (promo.length > 0) {
-        console.log(promo[0].discount);
         this.discount = promo[0].discount;
       }
     });
@@ -66,8 +64,7 @@ class ShopItemView {
     <div class="shop-item__name">${this.itemObject.frontName}</div>
     <div class="shop-item__price price">
       <div
-        class="price__new wow scalePrice"
-        data-wow-delay="5s"
+        class="price__new"
       >${this.stringifyPrice(this.getDiscountedPrice())}</div>
       <div class="price__old">${this.stringifyPrice(this.itemObject.price.amount)}</div>
     </div>
@@ -77,10 +74,10 @@ class ShopItemView {
       </div>
       <a
         class="item-footer__button btn-primary js-gtm-event"
-        href=${this.itemObject.link}
+        href=https://msk.tele2.ru/shop/product/${this.itemObject.categorySlug}/${this.itemObject.slug}/
         target="_blank"
         title="Подробнее"
-        data-event=${this.itemObject.dataEvent}
+        data-event=${this.itemObject.slug}
       >
         <span class="button__text"> Подробнее </span>
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
