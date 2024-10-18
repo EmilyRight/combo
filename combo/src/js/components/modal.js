@@ -7,6 +7,8 @@ const { body } = document;
 export function openModal(modalBoxId) {
   const modalBox = document.querySelector(modalBoxId);
   const modal = modalBox.closest('.popup-modal');
+  // eslint-disable-next-line no-use-before-define
+  body.style.paddingRight = `${getScrollbarWidth()}px`;
   body.classList.add(noscroll);
   modal.classList.remove(hidden);
   modalBox.classList.add(active);
@@ -25,8 +27,16 @@ export function openModal(modalBoxId) {
   });
 }
 
+function getScrollbarWidth() {
+  const documentWidth = document.documentElement.clientWidth;
+  const windowsWidth = window.innerWidth;
+  const scrollbarWidth = windowsWidth - documentWidth;
+  return scrollbarWidth;
+}
+
 export function closeModal(modalBoxId) {
   const modalBox = document.querySelector(modalBoxId);
   body.classList.remove(noscroll);
+  body.style.paddingRight = '0px';
   modalBox.closest('.popup-modal').classList.add(hidden);
 }

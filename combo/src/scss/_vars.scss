@@ -10,29 +10,30 @@
   text-overflow: ellipsis;
 }
 
-//@import "./base/markup-mixins";
-//@import "./mq";
-
-$base-font-size: 1.6rem;
+$base-font-size: 1.5rem;
 $base-line-height: 1.375;
-$base-font-family: "tele2_sans", sans-serif;
+$base-font-family: 'rooftop', sans-serif;
 $base-min-width: 320px;
-$icoPath: "../img/icons";
-$fontPath: "../fonts";
+$icoPath: '../img/icons';
+$fontPath: '../fonts';
+
 
 ////Breakpoints
 $mobile: 767px;
 $tablet: 992px;
-$retina: 1.5; // mobile retina
+$retina: 1.5;     // mobile retina
 $retina-hd: 2.5;
 
+
 ////FONTS
-$font1: "tele2_sans";
-$font1b: "tele2_sans";
-$font2: "tele2_serif";
-$font2b: "tele2_serif";
-$font3: "tele2_short";
-$fontStencil: "stencil";
+$font1: "rooftop";
+$font2: "halvar";
+$font3: "halvar-stencil";
+$fontStencil: "halvar";
+
+$color-brand-default:#A7FC00;
+$color-brand-hover:#74C800;
+$color-brand-active:#B7FB56;
 
 ////Colors
 $color-white: #ffffff;

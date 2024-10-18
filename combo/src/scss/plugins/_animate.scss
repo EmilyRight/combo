@@ -698,7 +698,6 @@
 
 @keyframes sim {
   0% {
-
     opacity: 0;
     transform: translateY(-5rem);
   }
@@ -733,7 +732,7 @@
 @keyframes profit-1 {
   0% {
     opacity: 0;
-    transform: rotate(0deg);
+    transform: rotate(-5deg);
   }
   25% {
     opacity: 1;
@@ -741,7 +740,7 @@
   }
   50% {
     opacity: 1;
-    transform: rotate(0deg);
+    transform: rotate(-5deg);
   }
   100% {
     opacity: 1;
@@ -757,12 +756,12 @@
 @keyframes profit-2 {
   0% {
     opacity: 0;
-    transform: rotate(-40deg) scale(0.5);
+    transform: rotate(-0deg) scale(0.5);
   }
 
   100% {
     opacity: 1;
-    transform: rotate(-40deg) scale(1);
+    transform: rotate(-0deg) scale(1);
   }
 }
 
@@ -774,16 +773,13 @@
 
 @keyframes profit-3 {
   0% {
-
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
   50% {
-
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
   }
   100% {
-
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
 }
 
@@ -795,15 +791,14 @@
 
 @keyframes scalePrice {
   0% {
-
     transform: scale(1);
   }
   50% {
-
+    opacity: 1;
     transform: scale(1.2);
   }
   100% {
-
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -811,5 +806,7 @@
 .scalePrice {
   -webkit-animation-name: scalePrice;
   animation-name: scalePrice;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
   animation-duration: 1s;
 }

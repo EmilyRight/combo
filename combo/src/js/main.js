@@ -1,24 +1,47 @@
+/* eslint-disable no-new */
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
 import { openModal } from './components/modal';
 import GTMEvents from './components/gtmEvents';
 import Animations from './components/animations';
+import handleTooltip from './components/tooltip';
+import ShopView from './components/shopItem/shopView';
+import ApiService from './services/api-service';
+import ShopModel from './components/shopItem/shopModel';
+import ShopPresenter from './components/shopItem/shopPresenter';
 
 const GTM = new GTMEvents();
 const animation = new Animations();
 
+const apiService = new ApiService();
+const shopModel = new ShopModel(apiService);
+
+shopModel.loadData().then(() => {
+  const shopView = new ShopView();
+  new ShopPresenter(shopView, shopModel);
+});
+
 /// /////// DocReady //////////
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
-
   GTM.addEventListeners();
   animation.init();
+  scrollTeaser(document.querySelector('.shop'));
   goNextSection();
   openPopup();
+  handleTooltip();
   handleFAQopening();
+  setCurrentYear();
 });
+
+function setCurrentYear() {
+  const yearSpan = document.querySelectorAll('.current-year');
+  yearSpan.forEach((span) => {
+    span.innerHTML = new Date().getFullYear().toString();
+  });
+}
 
 // scroll to next section
 function scrollToElement(el) {
@@ -43,6 +66,14 @@ function goNextSection() {
       });
     });
   });
+}
+
+// scroll to next if URL contains #about
+
+function scrollTeaser(el) {
+  if (document.location.hash === '#about') {
+    scrollToElement(el);
+  }
 }
 // open pop-up modal
 function openPopup() {
