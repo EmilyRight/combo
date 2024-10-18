@@ -17,6 +17,7 @@ body {
 }
 
 @import "vars";
+@import "fonts";
 @import "base/base-reset";
 @import "typo";
 
@@ -24,7 +25,7 @@ body {
 body {
   color: $color-dark;
   background: inherit;
-  font: 1.6rem/1.375 tele2_short, sans-serif;
+  font: 1.5rem/1.375 'rooftop', sans-serif;
   -webkit-text-size-adjust: none;
   &.noscroll {
     overflow: hidden !important;
@@ -116,7 +117,7 @@ body {
     font-size: 7px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   html {
     font-size: 12px;
   }

@@ -32,6 +32,7 @@
     width: 100%;
     margin-bottom: 2rem;
     overflow: hidden;
+
     &__action {
       font-family: $font1;
       font-size: 2rem;
@@ -61,7 +62,7 @@
 
     &__image {
       position: absolute;
-      max-width: 40%;
+      max-width: 35%;
       right: 0;
       bottom: 0;
       img {
@@ -70,45 +71,46 @@
       }
 
       &_1 {
-        right: -2rem;
-        bottom: 0.8rem;
-        // transform: rotate(10deg);
+        right: -3rem;
+        bottom: 0rem;
+        transform: rotate(10deg);
         transform-origin: top left;
-        // animation: profit-1 1s linear 0s 1 normal forwards;
       }
-      &_2 {
-        right: -3.5rem;
-        bottom: -2.5rem;
-        max-width: 50%;
 
-        // transform: rotate(-40deg);
-        // animation: profit-2 1s linear 0s 1 normal forwards;
+      &_2 {
+        max-width: 40%;
+        right: -2rem;
+        bottom: -1rem;
       }
+
       &_3 {
         right: -0rem;
-        max-width: 40%;
         transform-origin: right bottom;
-        // transform: rotate(15deg);
-        // animation: profit-3 1s linear 0s 1 normal forwards;
-        img {
-        }
       }
     }
   }
+
   .popup-icon {
     position: absolute;
+    display: block;
     top: 0rem;
     right: -2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid $color-dark;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
     cursor: pointer;
     transition: 0.4s;
-    border: none;
     background-color: transparent;
     margin: 0;
     padding: 0;
-    img {
-      display: block;
-      max-width: 100%;
-    }
+
     &:hover {
       transform: scale(0.8);
     }
@@ -117,7 +119,11 @@
   .profits-item {
     &_mix {
       min-height: 16rem;
-
+      overflow: visible;
+      & .image {
+        overflow: hidden;
+        border-radius: 0 0 1.8rem 0;
+      }
       .profits-item__text-block {
         position: relative;
         z-index: 10;
@@ -149,17 +155,17 @@
           bottom: 0;
         }
         .image_normal {
-          max-width: 15rem;
-          right: -2.5rem;
-          bottom: -5rem;
+          max-width: 21rem;
+          right: -5rem;
+          bottom: 0rem;
           z-index: 1;
         }
         .image_blured {
-          max-width: 10rem;
+          max-width: 15rem;
           transform: scale(-1, 1);
           filter: blur(2px);
-          right: 45%;
-          bottom: -3rem;
+          right: 35%;
+          bottom: 0rem;
           z-index: 0;
         }
       }
@@ -202,8 +208,7 @@
 
       &__action {
         font-family: $font1;
-        font-size: 2.2rem;
-        line-height: 2.8rem;
+        font-size: 2rem;
         max-width: 90%;
       }
 
@@ -213,6 +218,12 @@
           img {
             max-width: 120%;
           }
+        }
+        &_2 {
+          max-width: 45%;
+        }
+        &_3 {
+          max-width: 38%;
         }
       }
     }
@@ -226,16 +237,14 @@
 
         .profits-item__image {
           .image_normal {
-            max-width: 20rem;
-            right: 15%;
-            bottom: -7rem;
+            max-width: 30rem;
+            right: 11%;
           }
           .image_blured {
-            max-width: 15rem;
+            max-width: 21rem;
             transform: scale(-1, 1);
             filter: blur(2px);
-            right: 38%;
-            bottom: -5rem;
+            right: 35%;
             z-index: 0;
           }
         }

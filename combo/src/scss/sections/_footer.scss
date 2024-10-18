@@ -12,7 +12,12 @@
       font-size: 1.6rem;
       line-height: 1.38;
     }
-
+    .copyrights {
+      margin-bottom: 1rem;
+      @media (max-width: 600px) {
+        margin-bottom: 1rem;
+      }
+    }
     .rules {
       margin-bottom: 1rem;
       .text-link {
@@ -25,7 +30,6 @@
     }
 
     @media (max-width: 600px) {
-      max-height: 9.2rem;
       padding: 1.8rem;
     }
   }

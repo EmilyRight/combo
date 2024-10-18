@@ -1,147 +1,104 @@
 //BUTTONS
-.btn,
-button {
-  outline: none;
-  user-select: none;
-}
+.btn, button {outline: none;user-select: none;border:none;}
 
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 1.9rem 4.5rem;
-  margin: 0 0 1.8rem;
-  text-align: center;
-  font-family: $font1b;
-  font-size: 1.6rem;
-  line-height: 1.38;
-  font-weight: bold;
-  letter-spacing: 0.05rem;
-  white-space: nowrap;
-  cursor: pointer;
+.btn {display: inline-block;
+  box-sizing: border-box;vertical-align: middle;
+  padding: 1.6rem 2.4rem;margin: 0 0 1.8rem;
+  text-align: center;font-family: $font2;
+  font-size: 1.6rem;font-weight: bold;
+  text-transform: uppercase;text-decoration:none;
+  white-space: nowrap;cursor: pointer;
   -webkit-tap-highlight-color: transparent;
- 
-  max-width: 100%;
-  border-radius: 3rem;
-  border: 0.2rem solid $color-dark;
-  color: $color-dark;
-  background-color: transparent;
-  transition: 0.3s;
-  &:hover {
-    background-color: transparent;
-    border-color: $color-gray;
-    color: $color-gray;
-  }
-  &:active {
-    transform: scale(0.96);
+
+  max-width: 100%;border-radius: 1.2rem;border:none;
+  color: $color-dark;background-color: #F2F2F2;
+  transition: 0.3s linear;position: relative;z-index: 5;
+
+  @media not (pointer:coarse){
+    &:hover { //background-color: transparent;
+      color: $color-gray;
+    }
   }
 
-  &.btn--small {
-    padding: 0.7rem 1.8rem !important;
-  }
-  &.btn--medium {
-    padding: 1.1rem 2.9rem;
-  }
+  &:active {transform: scale(0.96);}
+
+  &.btn--small{padding: 0.8rem 1.2rem !important;}
+  &.btn--medium {padding: 1.2rem 2rem;}
 
   .ico {
     font-size: 2.4rem;
-    width: 2.8rem;
-    height: 2rem;
-    vertical-align: middle;
-    display: inline-block;
+    width: 2.8rem;height: 2rem;
+    vertical-align: middle;display: inline-block;
     margin-bottom: -0.2rem;
     margin-top: -0.4rem;
     margin-left: -1.5rem;
-    & + span {
-      line-height: 2rem;
-      vertical-align: middle;
-      display: inline-block;
-    }
+    & + span {line-height: 2rem;vertical-align: middle;display: inline-block;}
   }
-  @media (max-width: 440px) {
-    padding: 1.1rem 2.9rem;
-    &.btn--small {
-      padding: 0.7rem 1.8rem;
-    }
+
+  @media (max-width: $mobile) {
+    padding: 1.2rem 3.3rem;
+    &.btn--small {padding: 0.7rem 1.8rem;}
   }
 }
 
-.btn.btn-active-action,
-.btn.btn-black,
-.btn.btn--black,
-.btn.btn-primary,
-.btn.btn--primary .btn-main {
-  color: #fff;
-  background: $color-dark;
-  &:hover {
-    background: $color-gray;
-    border-color: $color-gray;
-    color: #fff;
-  }
-  &.disabled,
-  &:disabled {
-    color: $color-lightgray2;
-    background: $color-dark;
-    border-color: $color-dark;
-  }
-}
 
-.btn-secondary {
-  background: #fff;
-  &:hover {
-    background: $color-yellow2;
-    color: $color-dark;
-    border-color: $color-yellow2;
-  }
-}
-.btn-yellow,
-.btn--yellow {
-  background: $color-yellow2;
-  border-color: $color-yellow2;
-  color: $color-dark;
-  &:hover {
-    background: $color-yellow3;
-    border-color: $color-yellow3;
-    color: $color-dark;
-  }
-  &.disabled,
-  &:disabled {
-    opacity: 0.5;
-    cursor: default;
+//////////// Button colors
+
+.btn.btn--main,.btn--primary {
+  color: #fff;background: #000;
+  @media not (pointer:coarse){
     &:hover {
-      background: $color-yellow2;
+      background: #333;border-color: #333;color: #fff;
+    }
+  }
+
+  &.disabled, &:disabled {
+    color: $color-lightgray2;background: $color-dark;border-color: $color-dark;
+  }
+}
+
+
+.btn--white{
+  color:#000;background:#fff;
+  @media not (pointer:coarse) {
+    &:hover {
+      background: #E6E6E6;border-color: #E6E6E6;color: #000;
+    }
+  }
+
+}
+
+
+.btn--brand {background: $color-brand-default;color:#000;
+  @media not (pointer:coarse) {
+    &:hover {
+      background: $color-brand-hover;color:#000;
     }
   }
 }
 
 //////////////////////
-.dark-bg {
-  .btn {
-    background-color: transparent;
-    border-color: #fff;
-    color: #fff;
-    &:hover {
-      color: $color-lightgray2;
-      border-color: $color-lightgray2;
-    }
-    &.disabled,
-    &:disabled {
-      color: $color-lightgray2;
-      background: transparent;
-      border-color: $color-lightgray2;
-      cursor: default !important;
-    }
+.dark-bg{
+  .btn{background-color: #f2f2f2;color: #000;
+    //&:hover {background-color: #5A5A5A}
 
     &.btn--black,
-    &.btn-black,
-    &.btn-main,
-    &.btn-primary {
+    &.btn--main,
+    &.btn--primary {
       background-color: #fff;
-      border-color: #fff;
-      color: $color-dark;
+      color: #000;
 
-      &:hover {
-        opacity: 0.6;
+      @media not (pointer:coarse){
+        &:hover {
+          background-color: #E6E6E6;
+          color: #000;
+        }
       }
+      &:focus,&:active{background-color: #BFBFBF}
+    }
+
+    &.disabled, &:disabled {
+      color: $color-lightgray2;background: transparent;cursor: default !important;
     }
   }
 }

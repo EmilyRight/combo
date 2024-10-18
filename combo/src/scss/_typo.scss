@@ -1,64 +1,33 @@
-@import "fonts";
-.h1,
-h1 {
-  font-size: 3.8rem;
-  line-height: 4.2rem;
-}
-.h5,
-h5 {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+@import "vars";
+
+h1,h2,h3,h4,h5{font-family: $font2;line-height: .9;color:#000;text-transform: uppercase;
+  .lowercase{text-transform: none;}
 }
 
-h2 {
-  margin: 0;
-  font-size: 3.8rem;
-  line-height: 4.4rem;
-  font-weight: bold;
-  font-family: $font2;
-  color: $color-dark;
-  @media (max-width: 600px) {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
-  }
+h1 {font-size: 3.8rem;margin-top: 0}
+h2 {font-size: 2.8rem;margin: 0 0 1.6rem;
+  @media (max-width: 600px) {font-size: 2.4rem;}
 }
-h3 {
-  font-size: 4.5rem;
-  line-height: 1.29;
-  font-weight: bold;
-  font-family: $font2;
-  color: $color-dark;
-  margin: 0 0 4rem;
-  @media (max-width: 600px) {
-    font-size: 2.8rem;
-    margin-bottom: 1.8rem;
-  }
-}
-h4 {
-  font-size: 2.4rem;
-  line-height: 1;
-  color: $color-dark;
-  @media (max-width: 600px) {
-    font-size: 1.8rem;
-  }
+/*h3 {font-size: 3.8rem;margin: 0 0 3.6rem;
+  @media (max-width: 600px) {font-size: 2.8rem;margin-bottom: 2.4rem;}
+}*/
+h3,h4{font-size: 2rem;line-height: .9;margin: 0 0 1.2rem;
+  @media (max-width: 600px) {font-size: 1.8rem;}
 }
 
-.link {
-  text-decoration: underline;
+.h5, h5 {font-size: 1.6rem;line-height: .9;}
+
+
+///////texts
+
+.link {text-decoration: underline;
   cursor: pointer;
-  &:hover {
-    text-decoration: none;
-  }
+  font-family: $font1;
+  &:hover {text-decoration: none;}
 }
 
-.subtitle {
-  font-size: 2.2rem;
-  line-height: 2.8rem;
-}
-p {
-  line-height: 1.38;
-  margin-bottom: 1.8rem;
-  margin-top: 0;
+.subtitle {font-size: 2.2rem;line-height: 2.8rem;}
+p {line-height: 1.38;margin-bottom: 1.8rem;margin-top: 0;
   a {
     text-decoration: underline;
     color: #1f2229;
@@ -66,24 +35,39 @@ p {
 }
 
 .br-desktop {
-  @media (max-width: 600px) {
-    display: none;
-  }
+  @media (max-width: 600px) {display: none;}
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+ul, ol {
+  padding: 0;margin: 0;
   list-style: none;
 }
 
+ul.list {
+  padding-left: 0;
+  line-height: 1.38;
+  list-style: none;
+  li {margin-bottom: 0.5em;
+    &:before {
+      margin-right: 0.64em;
+      width: 0.31em;
+      height: 0.31em;
+      background: $color-dark;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -0.1em;
+      content: "";
+    }
+  }
+}
 ol.list {
   padding-left: 0;
   line-height: 1.38;
   counter-reset: list;
   list-style: none;
-  li {
-    margin-bottom: 0.8rem;
+  li {margin-bottom: 0.8rem;
     &:before {
       counter-increment: list;
       content: counter(list) ".";
@@ -93,16 +77,11 @@ ol.list {
   }
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
